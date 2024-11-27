@@ -9,7 +9,7 @@
 body {
     background:linear-gradient(120deg, #171744,#2d59c9);
     background-attachment: fixed;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Header */
