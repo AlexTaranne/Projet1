@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  /* body */
+  body {
+    background: linear-gradient(120deg, #171744, #0d162d);
+    background-attachment: fixed;
+    /* overflow: hidden; */
+  }
+  
+  /* Header */
+  
+  header {
+    margin: 1rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #fa750010;
+    border-radius: 10px;
+  }
+  
+  /* section_1 */
+  
+  /* section_2 */
+  
+  /* Footer */
+  footer {
+    text-align: center;
+  }
+  
