@@ -1,5 +1,17 @@
 // Déclaration d'un tableau avec des objets pour les équipements à ajouter
 
+const hamster = document.querySelector(".hamster");
+const numberClick = document.querySelector("h2");
+
+//Dès qu'on clique on veut incrementer une variable score de 1 et l'afficher en h2
+let score = 0;
+
+hamster.addEventListener("click", () => {
+  score++;
+  numberClick.innerHTML = ` ${score} 🚀`;
+  //console.log(score);
+});
+
 const equipementsSpatials = [
   {
     image: "./img/Bouteille.jpg",
