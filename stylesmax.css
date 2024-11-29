@@ -23,7 +23,8 @@ header {
 }
 
 /* section_1 */
-
+main > section > img {height: 20vh;
+}
 /* section_2 */
 
 /* Footer */
