@@ -1,6 +1,6 @@
 // Déclaration d'un tableau avec des objets pour les équipements à ajouter
 
-const hamster = document.querySelector(".hamster");
+const hamster = document.querySelector(".centerHamster");
 const numberClick = document.querySelector("h2");
 
 //Dès qu'on clique on veut incrementer une variable score de 1 et l'afficher en h2
@@ -58,9 +58,27 @@ function createEquipement(equipements) {
     equipementArt.appendChild(equipementTitle);
 
     equipementImg.addEventListener("click", function () {
-      alert("équipement :" + equipementTitle.textContent);
+      // alert("équipement :" + equipementTitle.textContent);
+      SoundCo2.play();
     });
   });
 }
 
 createEquipement(equipementsSpatials);
+
+// ajout des deux autres équipement
+
+// son sur équipement
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   // Sélection image
+//   // const equipementImage = document.getElementById('equipementImage');
+//   const equipementImage = document.getElementsByClassName('equipementImage');
+//   // Sélection l'audio
+//   const SoundCo2 = document.getElementById('SoundCo2');
+
+//   // Ajout clic sur l'image
+//   equipementImage.addEventListener('click', () => {
+//     // play lorsque l'image est cliquée
+//     SoundCo2.play();
+//   });
+// });

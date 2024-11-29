@@ -1,33 +1,91 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white;
-  }
-  
-  /* body */
-  body {
-    background: linear-gradient(120deg, #171744, #0d162d);
-    background-attachment: fixed;
-    /* overflow: hidden; */
-  }
-  
-  /* Header */
-  
-  header {
-    margin: 1rem;
-    text-align: center;
-    padding: 1rem;
-    background-color: #fa750010;
-    border-radius: 10px;
-  }
-  
-  /* section_1 */
-  
-  /* section_2 */
-  
-  /* Footer */
-  footer {
-    text-align: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+:root {
+  --color-box: #fa750010;
+  --color-border-box: #ffffff20;
+  --main-font-family: "Jura", sans-serif;
+}
+
+/* body */
+body {
+  background: linear-gradient(120deg, #171744, #0d162d);
+  background-attachment: fixed;
+  /* overflow: hidden; */
+}
+
+/* Header */
+
+header {
+  background-color: #fa750010;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  border-radius: 10px;
+  font-family: "Jura", sans-serif;
+  color: white;
+  padding: 0.8rem;
+}
+
+section > img {
+  height: 200px;
+  cursor: pointer;
+}
+
+.centerHamster {
+  display: flex;
+  justify-content: center;
+}
+
+/* main img{
+    width: 20vw;
+} */
+
+/* variables */
+.equipementsBar {
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--color-box);
+  border: solid 1px var(--color-border-box);
+  border-radius: 10px;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0.8rem;
+}
+.equipement {
+  text-align: center;
+}
+
+.equipementTitle {
+  font-family: var(--main-font-family);
+  font-size: 1rem;
+  color: white;
+}
+
+.equipementImage {
+  max-height: 11vh;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: 1rem;
+  font-family: "Jura", sans-serif;
+}
+
+/* Version Desktop */
+@media screen and (min-width: 768px) {
+  /* .ul {
+     
+      
+    } */
+}
