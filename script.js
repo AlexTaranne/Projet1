@@ -46,9 +46,32 @@ function createEquipement(equipements) {
     equipementArt.appendChild(equipementTitle);
 
     equipementImg.addEventListener("click", function () {
-      alert("équipement :" + equipementTitle.textContent);
+      // alert("équipement :" + equipementTitle.textContent);
+      SoundCo2.play();
+
+    
     });
   });
 }
 
 createEquipement(equipementsSpatials);
+
+
+
+
+// ajout des deux autres équipement
+
+// son sur équipement
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   // Sélection image 
+//   // const equipementImage = document.getElementById('equipementImage');
+//   const equipementImage = document.getElementsByClassName('equipementImage');
+//   // Sélection l'audio
+//   const SoundCo2 = document.getElementById('SoundCo2');
+
+//   // Ajout clic sur l'image
+//   equipementImage.addEventListener('click', () => {
+//     // play lorsque l'image est cliquée
+//     SoundCo2.play();
+//   });
+// });
