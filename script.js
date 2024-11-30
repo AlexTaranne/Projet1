@@ -11,6 +11,7 @@ hamster.addEventListener("click", () => {
   numberClick.innerHTML = ` ${score} 🚀`;
   //console.log(score);
 });
+console.log(score);
 
 const equipementsSpatials = [
   {
