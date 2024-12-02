@@ -17,17 +17,20 @@ const equipementsSpatials = [
     image: "./img/Bouteille.jpg",
     alt: "bouteilles d'oxygène",
     title: "15🚀",
+    soundId: "SoundCo2",  // ID du son
   },
   {
     image: "./img/Casque.jpg",
     alt: "Casque spatial",
     title: "25🚀",
+    soundId: "SoundCasque",  // ID du son
   },
 
   {
     image: "./img/Fusee.jpg",
     alt: "fusée spatial",
     title: "50🚀",
+    soundId: "SoundFusee",
   },
 ];
 
@@ -36,9 +39,10 @@ function createEquipement(equipements) {
   const equipementsBar = document.querySelector(".equipementsBar");
   equipementsBar.innerHTML = "";
 
+
   // on boucle sur l'ensemble des éléments du tableau
   equipements.forEach((equipement) => {
-    const { image, alt, title } = equipement;
+    const { image, alt, title, soundId } = equipement;
 
     //création de l'article equipementArt
     const equipementArt = document.createElement("article");
@@ -58,27 +62,13 @@ function createEquipement(equipements) {
     equipementArt.appendChild(equipementTitle);
 
     equipementImg.addEventListener("click", function () {
-      // alert("équipement :" + equipementTitle.textContent);
-      SoundCo2.play();
+      // Récupére l'audio en fonction de soundId
+      const audio = document.getElementById(soundId);
+      if (audio) {
+        audio.play();
+      }
     });
   });
 }
 
 createEquipement(equipementsSpatials);
-
-// ajout des deux autres équipement
-
-// son sur équipement
-// document.addEventListener('DOMContentLoaded', (event) => {
-//   // Sélection image
-//   // const equipementImage = document.getElementById('equipementImage');
-//   const equipementImage = document.getElementsByClassName('equipementImage');
-//   // Sélection l'audio
-//   const SoundCo2 = document.getElementById('SoundCo2');
-
-//   // Ajout clic sur l'image
-//   equipementImage.addEventListener('click', () => {
-//     // play lorsque l'image est cliquée
-//     SoundCo2.play();
-//   });
-// });
