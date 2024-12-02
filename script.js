@@ -78,7 +78,7 @@ function createEquipement(equipements) {
 
   // on boucle sur l'ensemble des éléments du tableau
   equipements.forEach((equipement) => {
-    const { image, alt, title, incrementBonus } = equipement;
+    const { image, alt, title, soundId, incrementBonus } = equipement;
     // const {15, 25, 50} = bonus ;
 
     //création de l'article equipementArt
@@ -111,9 +111,6 @@ function createEquipement(equipements) {
       displayScore();
       increment = incrementBonus;
       countdownBonus();
-
-      // equipementImg.style.filter = "grayscale(0)";
-      // SoundCo2.play();
     });
   });
 }
