@@ -30,6 +30,13 @@ function countdownBonus() {
   }, timeBonus);
 }
 
+function timerProgressBar() {
+  updateProgress(100);
+  setTimeout(() => {
+    updateProgress(0);
+  }, timeBonus);
+}
+
 const equipementsSpatials = [
   {
     image: "./img/Bouteille.jpg",
@@ -101,16 +108,21 @@ function createEquipement(equipements) {
     equipementArt.appendChild(equipementTitle);
 
     //ajout d'un listener pour augmenter l'increment du score pendant un certain temps
+
     equipementImg.addEventListener("click", function () {
       // Récupére l'audio en fonction de soundId
-      const audio = document.getElementById(soundId);
-      if (audio) {
-        audio.play();
+
+      if (score >= incrementBonus) {
+        const audio = document.getElementById(soundId);
+        if (audio) {
+          audio.play();
+        }
+        score -= incrementBonus;
+        displayScore();
+        increment = incrementBonus;
+        timerProgressBar();
+        countdownBonus();
       }
-      score -= incrementBonus;
-      displayScore();
-      increment = incrementBonus;
-      countdownBonus();
     });
   });
 }
@@ -139,13 +151,3 @@ const bar = new ProgressBar.Circle("#progress-bar", {
 function updateProgress(progress) {
   bar.set(progress / 100);
 }
-
-updateProgress(50);
-
-// ajout des deux autres équipement
-
-function updateProgress(progress) {
-  bar.set(progress / 100);
-}
-
-updateProgress(50);
