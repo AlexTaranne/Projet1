@@ -144,3 +144,11 @@ function updateProgress(progress) {
 }
 
 updateProgress(50);
+
+// ajout des deux autres équipement
+
+function updateProgress(progress) {
+  bar.set(progress / 100);
+}
+
+updateProgress(50);
