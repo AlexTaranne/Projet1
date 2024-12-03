@@ -152,10 +152,8 @@ const bar = new ProgressBar.Circle("#progress-bar", {
 function updateProgress(progress) {
   bar.animate(progress / 100);
 }
-<<<<<<< HEAD
 //  timer  de X secondes  lors d un clic sur les equipements
 const startButton = document.getElementsByClassName("equipementsBar")[0];
-
 function startTimer(){
   const updateInterval = 100;
   let elapsedTime = 1;
