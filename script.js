@@ -173,3 +173,47 @@ function startTimer(){
    }, timePb * 1000 + 1000  );
   } 
 startButton.addEventListener('click', startTimer);
+
+//animations des Rockets  de maniere random
+function launchRandomRockets() {
+  //nombre de rockets
+  const rocketCount = 30;
+  for (let i = 0; i < rocketCount; i++) {
+    const rocket = document.createElement("div");
+    rocket.classList.add("rocket");
+    rocket.innerText = "🚀";
+
+    const startX = Math.random() * window.innerWidth;
+    const startY = Math.random() * window.innerHeight;
+
+    rocket.style.position = "absolute";
+    rocket.style.left = `${startX}px`;
+    rocket.style.top = `${startY}px`;
+    rocket.style.fontSize = "50px";
+    rocket.style.transition = "transform 2s ease-out, opacity 2s ease-out";
+
+    document.body.appendChild(rocket);
+
+    setTimeout(() => {
+      const endX = startX + (Math.random() - 0.5) * 500;
+      const endY = startY + (Math.random() - 0.5) * 500;
+
+      rocket.style.transform = `translate(${endX - startX}px, ${endY - startY}px)`;
+      rocket.style.opacity = "0";
+    }, 50);
+    setTimeout(() => {
+      rocket.remove();
+    }, 2000);
+  }
+}
+
+hamster.addEventListener("click", launchRandomRockets);
+
+const style = document.createElement("style");
+style.innerHTML = `
+  .rocket {
+    position: absolute;
+    will-change: transform, opacity;
+  }
+`;
+document.head.appendChild(style);
