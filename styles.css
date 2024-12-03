@@ -119,8 +119,47 @@ footer {
 
 /* Version Desktop */
 @media screen and (min-width: 768px) {
-  /* .ul {
-     
-      
-    } */
+ 
+
+
+.equipementsBar{
+  flex-direction: column;
+  
+}
+
+main{ 
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  /* margin-right: 37rem; */
+}
+
+.equipementImage {
+  max-height: 25vh;
+  
+}
+
+.equipementsBar {
+  height: 92vh;
+  width: 40vh;
+  margin: 1rem;
+}
+
+.planet {
+  height: 80vh;
+}
+
+.headPlanet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+}
+header {
+  width: 90%;
+  
+}
+
+
+
 }
