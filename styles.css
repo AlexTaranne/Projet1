@@ -51,8 +51,8 @@ section>img {
 .planet {
   display: flex;
   justify-content: center;
-  max-width: 100vw;
-  max-height: 100vh;
+  max-width: 90vw;
+  max-height: 90vh;
   background-size: cover;
   opacity: 90%;
   position: relative;
@@ -69,7 +69,7 @@ section>img {
   z-index: 2;
 }
 
-.hamster {
+/* .hamster {
   position: relative;
   display: flex;
   max-width: 86vw;
@@ -77,7 +77,7 @@ section>img {
   background-size: cover;
   z-index: 2;
   right: 95%;
-}
+} */
 /* main img{
     width: 20vw;
 } */
@@ -124,6 +124,7 @@ footer {
 
 .equipementsBar{
   flex-direction: column;
+  /* margin-left: ; */
   
 }
 
@@ -135,7 +136,7 @@ main{
 }
 
 .equipementImage {
-  max-height: 25vh;
+  max-height: 20vh;
   
 }
 
@@ -146,7 +147,7 @@ main{
 }
 
 .planet {
-  height: 80vh;
+  height: 60vh;
 }
 
 .headPlanet {
@@ -157,9 +158,25 @@ main{
 }
 header {
   width: 90%;
+  padding: 3rem;
   
 }
 
+footer {
+  margin-left: 28vw;
+
+}
+
+.progress-container {
+  position: absolute;
+  background-size: cover;
+  width: 30rem;
+  height: 30rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
 
 
 }

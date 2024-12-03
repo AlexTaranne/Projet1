@@ -139,8 +139,8 @@ const bar = new ProgressBar.Circle("#progress-bar", {
   strokeWidth: 10,
   trailColor: "#",
   trailWidth: 5,
-  duration:1000,
-  easing: "linear", 
+  duration: 1000,
+  easing: "linear",
   from: { color: "#FEB310", width: 1 },
   to: { color: "#f44336", width: 4 },
   step: function (state, circle) {
@@ -150,26 +150,27 @@ const bar = new ProgressBar.Circle("#progress-bar", {
   },
 });
 function updateProgress(progress) {
-  bar.animate(progress / 100);
+  bar.set(progress / 100);
 }
+updateProgress(100);
 //  timer  de X secondes  lors d un clic sur les equipements
-const startButton = document.getElementsByClassName("equipementsBar")[0];
-function startTimer(){
-  const updateInterval = 100;
-  let elapsedTime = 1;
-  bar.set(0);
-  const interval = setInterval(() => {
-    const ProgressBar = (elapsedTime / timePb) * 100;
-    updateProgress(ProgressBar);
-    // console.log(elapsedTime);
-    if ( elapsedTime >= timePb ) {
-      clearInterval(interval);
-    } 
-    elapsedTime++ ;
-   }, 1000);
-   setTimeout(() => {
-    bar.set(0);
-    // console.log("barSupprimer");
-   }, timePb * 1000 + 1000  );
-  } 
-startButton.addEventListener('click', startTimer);
+// const startButton = document.getElementsByClassName("equipementsBar")[0];
+// function startTimer(){
+//   const updateInterval = 100;
+//   let elapsedTime = 1;
+//   bar.set(0);
+//   const interval = setInterval(() => {
+//     const ProgressBar = (elapsedTime / timePb) * 100;
+//     updateProgress(ProgressBar);
+//     // console.log(elapsedTime);
+//     if ( elapsedTime >= timePb ) {
+//       clearInterval(interval);
+//     }
+//     elapsedTime++ ;
+//    }, 1000);
+//    setTimeout(() => {
+//     bar.set(0);
+//     // console.log("barSupprimer");
+//    }, timePb * 1000 + 1000  );
+//   }
+// startButton.addEventListener('click', startTimer);
