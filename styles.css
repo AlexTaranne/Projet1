@@ -15,7 +15,6 @@
 body {
   background: linear-gradient(120deg, #171744, #0d162d);
   background-attachment: fixed;
-  /* overflow: hidden; */
 }
 
 /* Header */
@@ -24,21 +23,15 @@ header {
   background-color: var(--color-box);
   border: solid 1px var(--color-border-box);
   display: flex;
-  /* margin: 0 auto; */
   flex-direction: column;
   align-items: center;
   margin: 1rem;
   border-radius: 10px;
   font-family: var(--main-font-family);
-  color: white;
   padding: 0.8rem;
+  user-select: none;
 }
 
-section>img {
-  /* height: 200px; */
-  cursor: pointer;
-
-}
 
 /* planet ainsi que le hamster */
 .centerHamster {
@@ -57,6 +50,8 @@ section>img {
   background-size: cover;
   opacity: 90%;
   position: relative;
+  user-select: none;
+
 }
 
 .progress-container {
@@ -70,23 +65,8 @@ section>img {
   z-index: 2;
 }
 
-/* .hamster {
-  position: relative;
-  display: flex;
-  max-width: 86vw;
-  max-height: 86vh;
-  background-size: cover;
-  z-index: 2;
-  right: 95%;
-} */
-/* main img{
-    width: 20vw;
-} */
-
-
 /* variables */
 .equipementsBar {
-  /* margin: 0 auto; */
   padding: 1rem;
   background-color: var(--color-box);
   border: solid 1px var(--color-border-box);
@@ -104,12 +84,14 @@ section>img {
 .equipementTitle {
   font-family: var(--main-font-family);
   font-size: 1rem;
-  color: white;
+
 }
 
 .equipementImage {
   max-height: 11vh;
   border-radius: 10px;
+  cursor: pointer;
+
 }
 
 .equipementImage:hover {
@@ -140,7 +122,6 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    /* margin-right: 37rem; */
   }
 
   .equipementImage {
@@ -175,18 +156,6 @@ footer {
     padding: 3rem;
     font-size: 1.5rem;
   }
-.planet:active {
-  animation: clic 500ms forwards;
-  transform: scale(0.95);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 45%;
-  animation: breathe 200ms forwards;
-}
-
-.equipementImage:hover {
-  transform: scale(0.95);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
 
   footer {
     margin-left: 45vh;
