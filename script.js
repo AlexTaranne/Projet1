@@ -152,7 +152,14 @@ const bar = new ProgressBar.Circle("#progress-bar", {
 function updateProgress(progress) {
   bar.animate(progress / 100);
 }
+
+
+updateProgress(100);
+
+
+
 //  timer  de X secondes  lors d un clic sur les equipements
+<<<<<<< HEAD
 const startButton = document.getElementsByClassName("equipementsBar")[0];
 function startTimer(){
   const updateInterval = 100;
@@ -217,3 +224,25 @@ style.innerHTML = `
   }
 `;
 document.head.appendChild(style);
+=======
+// const startButton = document.getElementsByClassName("equipementsBar")[0];
+// function startTimer(){
+//   const updateInterval = 100;
+//   let elapsedTime = 1;
+//   bar.set(0);
+//   const interval = setInterval(() => {
+//     const ProgressBar = (elapsedTime / timePb) * 100;
+//     updateProgress(ProgressBar);
+//     // console.log(elapsedTime);
+//     if ( elapsedTime >= timePb ) {
+//       clearInterval(interval);
+//     } 
+//     elapsedTime++ ;
+//    }, 1000);
+//    setTimeout(() => {
+//     bar.set(0);
+//     // console.log("barSupprimer");
+//    }, timePb * 1000 + 1000  );
+//   } 
+// startButton.addEventListener('click', startTimer);
+>>>>>>> e3ad8fd7809f0238c1dc0f0891e395983643df37
