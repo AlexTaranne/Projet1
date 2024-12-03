@@ -142,7 +142,7 @@ const bar = new ProgressBar.Circle("#progress-bar", {
   duration:1000,
   easing: "linear", 
   from: { color: "#FEB310", width: 1 },
-  to: { color: "#f44336", width: 4 },
+  to: { color: "#f44336", width: 3 },
   step: function (state, circle) {
     circle.path.setAttribute("stroke", state.color);
     circle.path.setAttribute("stroke-width", state.width);
@@ -177,7 +177,7 @@ startButton.addEventListener('click', startTimer);
 //animations des Rockets  de maniere random
 function launchRandomRockets() {
   //nombre de rockets
-  const rocketCount = 30;
+  const rocketCount = 1;
   for (let i = 0; i < rocketCount; i++) {
     const rocket = document.createElement("div");
     rocket.classList.add("rocket");
