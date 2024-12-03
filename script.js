@@ -7,7 +7,9 @@ let score = 0;
 
 let increment = 1;
 
-let timeBonus = 3000;
+let timeBonus = 5000;
+
+let timePb = 4; /// temps de la barre de progression en secondes avec une seconde de moin
 
 function createRocket() {
   hamster.addEventListener("click", () => {
@@ -137,17 +139,39 @@ const bar = new ProgressBar.Circle("#progress-bar", {
   strokeWidth: 10,
   trailColor: "#",
   trailWidth: 5,
-  duration: 1400,
-  easing: "easeInOut",
-  from: { color: "#FEB310", width: 3 },
-  to: { color: "#f44336", width: 3 },
+  duration:1000,
+  easing: "linear", 
+  from: { color: "#FEB310", width: 1 },
+  to: { color: "#f44336", width: 4 },
   step: function (state, circle) {
     circle.path.setAttribute("stroke", state.color);
     circle.path.setAttribute("stroke-width", state.width);
     circle.path.setAttribute("stroke-linecap", "round");
   },
 });
-
 function updateProgress(progress) {
-  bar.set(progress / 100);
+  bar.animate(progress / 100);
 }
+<<<<<<< HEAD
+//  timer  de X secondes  lors d un clic sur les equipements
+const startButton = document.getElementsByClassName("equipementsBar")[0];
+
+function startTimer(){
+  const updateInterval = 100;
+  let elapsedTime = 1;
+  bar.set(0);
+  const interval = setInterval(() => {
+    const ProgressBar = (elapsedTime / timePb) * 100;
+    updateProgress(ProgressBar);
+    // console.log(elapsedTime);
+    if ( elapsedTime >= timePb ) {
+      clearInterval(interval);
+    } 
+    elapsedTime++ ;
+   }, 1000);
+   setTimeout(() => {
+    bar.set(0);
+    // console.log("barSupprimer");
+   }, timePb * 1000 + 1000  );
+  } 
+startButton.addEventListener('click', startTimer);
