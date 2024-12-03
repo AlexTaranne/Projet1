@@ -34,53 +34,26 @@ header {
   padding: 0.8rem;
 }
 
-section>img {
-  /* height: 200px; */
-  cursor: pointer;
-
-}
-
-/* planet ainsi que le hamster */
-.centerHamster {
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.planet {
+main {
   display: flex;
   justify-content: center;
-  max-width: 100vw;
-  max-height: 100vh;
-  background-size: cover;
-  opacity: 90%;
-  position: relative;
-}
-
-.progress-container {
-  position: absolute;
-  background-size: cover;
-  width: 23rem;
-  height: 23rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  align-items: center;
+  height: 30vh;
+  margin: 10rem;
 }
 
 .hamster {
-  position: relative;
-  display: flex;
-  max-width: 86vw;
-  max-height: 86vh;
-  background-size: cover;
-  z-index: 2;
-  right: 95%;
+  max-width: 30vh;
+  cursor: pointer;
 }
-/* main img{
-    width: 20vw;
-} */
+
+
+
+
+
+
+
+
 
 /* variables */
 .equipementsBar {
@@ -118,9 +91,68 @@ footer {
 }
 
 /* Version Desktop */
+
 @media screen and (min-width: 768px) {
-  /* .ul {
-     
-      
-    } */
-}
+ 
+
+
+  .equipementsBar{
+    flex-direction: column;
+  
+  }
+  
+  main{ 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    /* margin-right: 37rem; */
+  }
+  
+  .equipementImage {
+    max-height: 20vh;
+    cursor: pointer;
+  }
+  
+  .equipementsBar {
+    height: 92vh;
+    width: 40vh;
+    margin: 1rem;
+    margin-left: 3rem;
+  }
+  
+  .planet {
+    height: 60vh;
+    margin: 2rem;
+  }
+  
+  .headPlanet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+  }
+  
+  header {
+    width: 90%;
+    padding: 3rem;
+  }
+  
+  footer {
+    margin-left: 45vh;
+  }
+  
+  .planet:active {
+    animation: clic 500ms forwards;
+    transform: scale(0.95);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 45%;
+    animation: breathe 200ms forwards;
+  }
+
+  .equipementImage:hover {
+    transform: scale(0.95);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  }
+

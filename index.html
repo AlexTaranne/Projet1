@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet 1</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
       rel="stylesheet"
@@ -15,34 +15,36 @@
   </head>
   <body>
     <main>
-      <header>
-        <h1>Space Hamster</h1>
-        <h2 class="NumberClick">0 🚀</h2>
-      </header>
-      <section>
-        <div class="centerHamster">
-          <div class="progress-container" id="progress-bar"></div>
-          <img class="planet" src="img/2.png" alt="planete ">
-          <img class="hamster" src="img/1.png" alt="hamster ">
-        </div>
+      <div class="headPlanet">
+        <header>
+          <h1>Space Hamster</h1>
+          <h2 class="NumberClick">0 🚀</h2>
+        </header>
+        <section>
+          <div class="centerHamster">
+            <div class="progress-container" id="progress-bar"></div>
+            <img class="planet" src="./img/hamsterPlanet.png" alt="planete " />
+            <!-- <img class="hamster" src="img/1.png" alt="hamster "> -->
+          </div>
+        </section>
+      </div>
+      <section class="equipementsBar">
+        <article class="equipement">
+          <img
+            class="equipementImage"
+            src="./img/Bouteille.jpg"
+            alt="3 bouteilles d'oxygènes"
+          />
+          <h3 class="equipementTitle">15🚀</h3>
+        </article>
       </section>
     </main>
-    <section class="equipementsBar">
-      <article class="equipement">
-        <img
-          class="equipementImage"
-          src="./img/Bouteille.jpg"
-          alt="3 bouteilles d'oxygènes"
-        />
-        <h3 class="equipementTitle">15🚀</h3>
-      </article>
-    </section>
-    <footer>© 2024 WCS. Tous droits réservés.</footer>
+    <footer><p>© 2024 WCS. Tous droits réservés.</p></footer>
 
-<!-- fichier MP3 --> 
- <audio id="SoundCo2" src="./mp3/co2.mp3"></audio>
- <audio id="SoundCasque" src="./mp3/casque.mp3"></audio>
- <audio id="SoundFusee" src="./mp3/fusee.mp3"></audio>
+    <!-- fichier MP3 -->
+    <audio id="SoundCo2" src="./mp3/co2.mp3"></audio>
+    <audio id="SoundCasque" src="./mp3/casque.mp3"></audio>
+    <audio id="SoundFusee" src="./mp3/fusee.mp3"></audio>
 
     <script src="script.js"></script>
   </body>
