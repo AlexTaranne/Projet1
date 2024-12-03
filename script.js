@@ -1,8 +1,5 @@
-// Déclaration d'un tableau avec des objets pour les équipements à ajouter
+// Déclaration de variables
 
-const hamster = document.querySelector(".centerHamster");
-
-//Dès qu'on clique on veut incrementer une variable score de 1 et l'afficher en h2
 let score = 0;
 
 let increment = 1;
@@ -10,6 +7,35 @@ let increment = 1;
 let timeBonus = 5000;
 
 let timePb = 4; /// temps de la barre de progression en secondes avec une seconde de moin
+
+// Déclaration d'un tableau avec des objets pour les équipements à ajouter
+
+const equipementsSpatials = [
+  {
+    image: "./img/Bouteille.jpg",
+    alt: "bouteilles d'oxygène",
+    title: "x 15🚀",
+    soundId: "SoundCo2", // ID du son
+    incrementBonus: 15, // les incréments sont aussi le prix d'achat des équipements
+  },
+  {
+    image: "./img/Casque.jpg",
+    alt: "Casque spatial",
+    title: "x 250🚀",
+    soundId: "SoundCasque", // ID du son
+    incrementBonus: 250,
+  },
+
+  {
+    image: "./img/Fusee.jpg",
+    alt: "fusée spatial",
+    title: "x 5000🚀",
+    soundId: "SoundFusee",
+    incrementBonus: 5000,
+  },
+];
+
+const hamster = document.querySelector(".centerHamster");
 
 function createRocket() {
   hamster.addEventListener("click", () => {
@@ -31,38 +57,6 @@ function countdownBonus() {
     increment = 1;
   }, timeBonus);
 }
-
-function timerProgressBar() {
-  updateProgress(100);
-  setTimeout(() => {
-    updateProgress(0);
-  }, timeBonus);
-}
-
-const equipementsSpatials = [
-  {
-    image: "./img/Bouteille.jpg",
-    alt: "bouteilles d'oxygène",
-    title: "x 15🚀",
-    soundId: "SoundCo2", // ID du son
-    incrementBonus: 15,
-  },
-  {
-    image: "./img/Casque.jpg",
-    alt: "Casque spatial",
-    title: "x 250🚀",
-    soundId: "SoundCasque", // ID du son
-    incrementBonus: 250,
-  },
-
-  {
-    image: "./img/Fusee.jpg",
-    alt: "fusée spatial",
-    title: "x 5000🚀",
-    soundId: "SoundFusee",
-    incrementBonus: 5000,
-  },
-];
 
 function checkIfIcanBuy(equipements) {
   setInterval(() => {
@@ -122,25 +116,20 @@ function createEquipement(equipements) {
         score -= incrementBonus;
         displayScore();
         increment = incrementBonus;
-        timerProgressBar();
         countdownBonus();
+        startButton.addEventListener("click", startTimer);
       }
     });
   });
 }
-
-checkIfIcanBuy(equipementsSpatials);
-createRocket();
-displayScore();
-createEquipement(equipementsSpatials);
 
 const bar = new ProgressBar.Circle("#progress-bar", {
   color: "#4caf50",
   strokeWidth: 10,
   trailColor: "#",
   trailWidth: 5,
-  duration:1000,
-  easing: "linear", 
+  duration: 1000,
+  easing: "linear",
   from: { color: "#FEB310", width: 1 },
   to: { color: "#f44336", width: 3 },
   step: function (state, circle) {
@@ -149,12 +138,14 @@ const bar = new ProgressBar.Circle("#progress-bar", {
     circle.path.setAttribute("stroke-linecap", "round");
   },
 });
+
 function updateProgress(progress) {
   bar.animate(progress / 100);
 }
 //  timer  de X secondes  lors d un clic sur les equipements
 const startButton = document.getElementsByClassName("equipementsBar")[0];
-function startTimer(){
+
+function startTimer() {
   const updateInterval = 100;
   let elapsedTime = 1;
   bar.set(0);
@@ -162,17 +153,16 @@ function startTimer(){
     const ProgressBar = (elapsedTime / timePb) * 100;
     updateProgress(ProgressBar);
     // console.log(elapsedTime);
-    if ( elapsedTime >= timePb ) {
+    if (elapsedTime >= timePb) {
       clearInterval(interval);
-    } 
-    elapsedTime++ ;
-   }, 1000);
-   setTimeout(() => {
+    }
+    elapsedTime++;
+  }, 1000);
+  setTimeout(() => {
     bar.set(0);
     // console.log("barSupprimer");
-   }, timePb * 1000 + 1000  );
-  } 
-startButton.addEventListener('click', startTimer);
+  }, timePb * 1000 + 1000);
+}
 
 //animations des Rockets  de maniere random
 function launchRandomRockets() {
@@ -198,7 +188,9 @@ function launchRandomRockets() {
       const endX = startX + (Math.random() - 0.5) * 500;
       const endY = startY + (Math.random() - 0.5) * 500;
 
-      rocket.style.transform = `translate(${endX - startX}px, ${endY - startY}px)`;
+      rocket.style.transform = `translate(${endX - startX}px, ${
+        endY - startY
+      }px)`;
       rocket.style.opacity = "0";
     }, 50);
     setTimeout(() => {
@@ -209,11 +201,7 @@ function launchRandomRockets() {
 
 hamster.addEventListener("click", launchRandomRockets);
 
-const style = document.createElement("style");
-style.innerHTML = `
-  .rocket {
-    position: absolute;
-    will-change: transform, opacity;
-  }
-`;
-document.head.appendChild(style);
+checkIfIcanBuy(equipementsSpatials);
+createRocket();
+displayScore();
+createEquipement(equipementsSpatials);
