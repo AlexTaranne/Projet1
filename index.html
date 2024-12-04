@@ -5,43 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet 1</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="styleheader.css" />
-    <link rel="stylesheet" href="stylesEquipements.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
   </head>
+
   <body>
     <main>
-      <header>
-        <h1>Space Hamster</h1>
-        <h2>🚀</h2>
-      </header>
-      <section>
-        <img
-          src="./img/HamsterAPoil.png"
-          alt="hamster roux qui se tient debout devant une planéte"
-        />
+      <div class="headPlanet">
+        <header>
+          <h1>Space Hamster</h1>
+          <h2 class="NumberClick">0 🚀</h2>
+        </header>
+        <section>
+          <div class="centerHamster">
+            <div class="progress-container" id="progress-bar"></div>
+            <img class="planet" src="./img/hamsterPlanet2.png" alt="planete " />
+            <!-- <img class="hamster" src="img/1.png" alt="hamster "> -->
+          </div>
+        </section>
+      </div>
+      <section class="equipementsBar">
+        <article class="equipement">
+          <img class="equipementImage" />
+        </article>
       </section>
     </main>
-    <section class="barEquipements">
-      <article class="">
-        <ul>
-          <li>
-            <img
-              class="equipementImage"
-              src="./img/Bouteille.jpg"
-              alt="3 bouteilles d'oxygènes"
-            />
-          </li>
-          <li><h3>15🚀</h3></li>
-        </ul>
-      </article>
-    </section>
-    <footer>© 2024 WCS. Tous droits réservés.</footer>
+    <footer>
+      <p>© 2024 WCS. Tous droits réservés.</p>
+    </footer>
+
+    <!-- fichier MP3 -->
+    <audio id="SoundCo2" src="./mp3/co2.mp3"></audio>
+    <audio id="SoundCasque" src="./mp3/casque.mp3"></audio>
+    <audio id="SoundFusee" src="./mp3/fusee.mp3"></audio>
+
     <script src="script.js"></script>
   </body>
 </html>

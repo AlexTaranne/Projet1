@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+:root {
+  --color-box: #fa750010;
+  --color-border-box: #ffffff20;
+  --main-font-family: "Jura", sans-serif;
+}
+
+/* body */
+body {
+  background: linear-gradient(120deg, #171744, #0d162d);
+  background-attachment: fixed;
+}
+
+/* Header */
+
+header {
+  background-color: var(--color-box);
+  border: solid 1px var(--color-border-box);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  border-radius: 10px;
+  font-family: var(--main-font-family);
+  padding: 0.8rem;
+  user-select: none;
+}
+
+
+/* planet ainsi que le hamster */
+.centerHamster {
+  padding: 2.5rem;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.planet {
+  display: flex;
+  justify-content: center;
+  max-width: 80vw;
+  max-height: 80vh;
+  background-size: cover;
+  opacity: 90%;
+  position: relative;
+  user-select: none;
+
+}
+
+.progress-container {
+  position: absolute;
+  background-size: cover;
+  width: 23rem;
+  height: 22rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* variables */
+.equipementsBar {
+  padding: 1rem;
+  background-color: var(--color-box);
+  border: solid 1px var(--color-border-box);
+  border-radius: 10px;
+  margin: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0.8rem;
+}
+.equipement {
+  text-align: center;
+}
+
+.equipementTitle {
+  font-family: var(--main-font-family);
+  font-size: 1rem;
+
+}
+
+.equipementImage {
+  max-height: 11vh;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.equipementImage:hover {
+  transform: scale(0.95);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-family: var(--main-font-family);
+}
+
+/* Version Desktop */
+@media screen and (min-width: 768px) {
+
+ .progress-container{
+  width: 43rem;
+  height: 43rem;
+ } 
+
+  .equipementsBar {
+    flex-direction: column;
+
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .equipementImage {
+    max-height: 20vh;
+  }
+
+  .equipementsBar {
+    height: 92vh;
+    width: 40vh;
+    margin: 1rem;
+    margin-left: 3rem;
+  }
+.equipementTitle{
+  font-size: 2rem;
+}
+
+
+  .planet {
+    height: 60vh;
+    margin: 2rem;
+  }
+
+  .headPlanet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+  }
+
+  header {
+    width: 90%;
+    padding: 3rem;
+    font-size: 1.5rem;
+  }
+
+  footer {
+    margin-left: 45vh;
+  }
+}
