@@ -20,11 +20,12 @@ body {
 
 /* Header */
 
+
 header {
   background-color: var(--color-box);
   border: solid 1px var(--color-border-box);
   display: flex;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   flex-direction: column;
   align-items: center;
   margin: 1rem;
@@ -41,7 +42,12 @@ section>img {
 }
 
 /* planet ainsi que le hamster */
+<<<<<<< HEAD
+.centerHamster {
+  padding: 2.5rem;
+=======
 /* .centerHamster {
+>>>>>>> e3ad8fd7809f0238c1dc0f0891e395983643df37
   display: flex;
   position: relative;
   width: 100%;
@@ -49,6 +55,16 @@ section>img {
 } */
 
 .planet {
+<<<<<<< HEAD
+  display: flex;
+  justify-content: center;
+  max-width: 80vw;
+  max-height: 80vh;
+  background-size: cover;
+  opacity: 90%;
+  position: relative;
+  user-select: none;
+=======
   
  /* margin: 0 auto; */
   /* max-width: 40vw;
@@ -71,13 +87,14 @@ main {
   flex-direction: column;
   align-items: center;
   
+>>>>>>> e3ad8fd7809f0238c1dc0f0891e395983643df37
 }
 
 .progress-container {
   position: absolute;
   background-size: cover;
   width: 23rem;
-  height: 23rem;
+  height: 22rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -97,13 +114,18 @@ main {
     width: 20vw;
 } */
 
+
 /* variables */
 .equipementsBar {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 1rem;
   background-color: var(--color-box);
   border: solid 1px var(--color-border-box);
   border-radius: 10px;
+<<<<<<< HEAD
+  margin: 2rem 1rem;
+=======
+>>>>>>> e3ad8fd7809f0238c1dc0f0891e395983643df37
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -125,17 +147,96 @@ main {
   border-radius: 10px;
 }
 
+.equipementImage:hover {
+  transform: scale(0.95);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
 /* Footer */
 footer {
   text-align: center;
-  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-family: var(--main-font-family);
 }
 
 /* Version Desktop */
 @media screen and (min-width: 768px) {
- 
 
+<<<<<<< HEAD
+h2 {
+  user-select: none;
+}
+
+
+ .progress-container{
+  width: 43rem;
+  height: 43rem;
+ } 
+
+  .equipementsBar {
+    flex-direction: column;
+
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    /* margin-right: 37rem; */
+  }
+
+  .equipementImage {
+    max-height: 20vh;
+    /* user-select: none; */
+  }
+
+  .equipementsBar {
+    height: 92vh;
+    width: 40vh;
+    margin: 1rem;
+    margin-left: 3rem;
+  }
+.equipementTitle{
+  font-size: 2rem;
+}
+
+
+  .planet {
+    height: 60vh;
+    margin: 2rem;
+
+    
+    user-select: none;
+  }
+
+  .headPlanet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+  }
+
+  header {
+    width: 90%;
+    padding: 3rem;
+    font-size: 1.5rem;
+  }
+.planet:active {
+  animation: clic 500ms forwards;
+  transform: scale(0.95);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 45%;
+  animation: breathe 200ms forwards;
+}
+
+.equipementImage:hover {
+  transform: scale(0.95);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+  footer {
+    margin-left: 45vh;
+  }
+=======
 
 .equipementsBar{
   flex-direction: column;
@@ -182,4 +283,5 @@ footer {
 }
 
 
+>>>>>>> e3ad8fd7809f0238c1dc0f0891e395983643df37
 }
